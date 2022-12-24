@@ -1,0 +1,251 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    list-style: none;
+}
+
+a {
+    cursor: pointer;
+    text-decoration: none;
+}
+
+body {
+    background-color: #232527;
+}
+
+.font__primary {
+    font-family: 'Skranji', cursive;
+    background-color: rgba(255, 255, 255, 0.75);
+    font-size: 2rem;
+    font-weight: 400;
+    color: transparent;
+    text-shadow: 2px 2px 3px rgba(0, 0, 0, 0.471);
+    -webkit-background-clip: text;
+    -moz-background-clip: text;
+    background-clip: text;
+}
+
+.header__wrapper,
+.footer__wrapper {
+    height: 60px;
+    width: 100vw;
+    display: grid;
+    justify-items: center;
+    align-items: center;
+    position: fixed;
+    z-index: 999;
+    background-color: #2b2d30;
+}
+
+.header__wrapper {
+    top: 0;
+    grid-template-columns: 1fr 2fr 1fr;
+
+}
+
+.footer__wrapper {
+    bottom: 0;
+    grid-template-columns: 4fr 1fr;
+
+}
+
+.header__wrapper::after {
+    content: "";
+    height: 3px;
+    position: absolute;
+    bottom: 0px;
+    left: 15%;
+    right: 15%;
+    background: rgb(38, 41, 43);
+    background: linear-gradient(90deg, rgba(62, 67, 70, 0) 0%,
+            rgba(62, 67, 70, 0.7) 22%,
+            rgba(62, 67, 70, 1) 50%,
+            rgba(62, 67, 70, 0.8) 75%,
+            rgba(62, 67, 70, 0) 100%);
+}
+
+.logo__container {
+    height: inherit;
+    display: flex;
+    align-items: center;
+}
+
+.logo {
+    height: 80%;
+}
+
+#topNav {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    align-items: center;
+}
+
+#topNav__ul {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    gap: 2rem;
+}
+
+.header__social--icon {
+
+    width: 60px;
+    height: 50px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    border-radius: 15px;
+    background: #232527;
+}
+
+#topNav__ul i {
+    font-size: 1.4rem;
+    color: rgb(110, 110, 110);
+    transition: all 0.2s;
+}
+
+#topNav__ul .fa-twitter:hover {
+    color: #1C9CEB;
+    font-size: 1.6rem;
+
+}
+
+#topNav__ul .fa-discord:hover {
+    color: #5562EA;
+    font-size: 1.6rem;
+}
+
+
+/* ----------------------- CSS SECTIONS ----------------------- */
+.pageFullHeight {
+    padding: 0;
+    /* avoiding fullpage header problem  */
+}
+
+
+/* ----------------------- CSS SECTIONS PAGE 1 ----------------------- */
+#page1 {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    justify-content: center;
+    align-items: center;
+
+    height: 100vh;
+    width: inherit;
+
+    position: relative;
+
+    -webkit-mask-image: radial-gradient(ellipse, black 40%, rgba(0, 0, 0, 0.2) 90%);
+    mask-image: radial-gradient(ellipse, black 50%, rgba(0, 0, 0, 0.2));
+
+}
+
+.main__banner--Logo {
+    width: 30%;
+    position: absolute;
+    top: 100px;
+
+}
+
+.main__banner {
+    position: absolute;
+    height: 100vh;
+    width: 100vw;
+}
+
+.main__banner--img {
+    height: 100%;
+    width: 100%;
+
+    position: absolute;
+
+    background-image: url(../assets/images/backgroundOpenedWider.png);
+    background-repeat: no-repeat;
+    background-size: 100% auto;
+
+    background-position: 0 0;
+
+}
+
+.main__banner--p {
+    position: absolute;
+    /* top: calc(50% - 8rem);
+    left: calc(50%); */
+
+    font-size: 4rem;
+
+    color: white;
+    text-decoration: dashed;
+    text-decoration-color: white;
+
+    text-align: center;
+}
+
+.banner--video {
+    width: 100%;
+    height: 100%;
+}
+
+
+/* ----------------------- CSS SECTIONS PAGE 2 ----------------------- */
+#page2 {
+    display: flex;
+    flex-direction: row;
+}
+
+.section--minecraft {
+    height: 100%;
+    width: 50%;
+    /* background: rgb(25, 45, 7);
+    background: radial-gradient(circle, rgba(25, 45, 7, 0.9) 0%,
+            rgba(12, 23, 2, 0.9) 69%); */
+    -webkit-box-shadow: inset 15px 0px 50px -10px rgba(0, 0, 0, 0.4);
+    box-shadow: inset 15px 0px 50px -10px rgba(0, 0, 0, 0.4);
+    transition: all 0.5s ease-in-out;
+}
+
+.section--minecraft:hover {
+    width: 55%;
+}
+
+.section--twitch {
+    height: 100%;
+    width: 50%;
+    /* background: rgb(24, 9, 54);
+    background: radial-gradient(circle, rgba(24, 9, 54, 0.8) 0%,
+            rgba(12, 3, 29, 0.8) 69%); */
+    -webkit-box-shadow: inset -15px 0px 50px -10px rgba(0, 0, 0, 0.4);
+    box-shadow: inset -15px 0px 50px -10px rgba(0, 0, 0, 0.4);
+    transition: all 0.5s ease-in-out;
+}
+
+.section--twitch:hover {
+    width: 55%;
+}
+
+.section--full {
+    width: 100%;
+}
+
+.section--close {
+    width: 0%;
+}
+
+
+/* ----------------------- CSS FOOTER ----------------------- */
+.footer--ul {
+    display: flex;
+    flex-direction: row;
+}
+
+.footer--text {
+    color: white;
+    font-size: 0.8rem;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-weight: 700;
+}
